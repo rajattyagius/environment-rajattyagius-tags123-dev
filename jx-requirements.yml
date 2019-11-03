@@ -15,8 +15,9 @@ cluster:
   zone: asia-south1-a
 environments:
 - ingress:
-    domain: 35.200.253.211.nip.io
-    externalDNS: false
+    cloud_dns_secret_name: external-dns-gcp-sa
+    domain: jxbootproject.tagscloud.org
+    externalDNS: true
     namespaceSubDomain: -jx.
     tls:
       email: ""
@@ -24,8 +25,8 @@ environments:
       production: false
   key: dev
 - ingress:
-    domain: ""
-    externalDNS: false
+    domain: jxbootproject.tagscloud.org
+    externalDNS: true
     namespaceSubDomain: ""
     tls:
       email: ""
@@ -33,8 +34,8 @@ environments:
       production: false
   key: staging
 - ingress:
-    domain: ""
-    externalDNS: false
+    domain: jxbootproject.tagscloud.org
+    externalDNS: true
     namespaceSubDomain: ""
     tls:
       email: ""
@@ -43,8 +44,9 @@ environments:
   key: production
 gitops: true
 ingress:
-  domain: 35.200.253.211.nip.io
-  externalDNS: false
+  cloud_dns_secret_name: external-dns-gcp-sa
+  domain: jxbootproject.tagscloud.org
+  externalDNS: true
   namespaceSubDomain: -jx.
   tls:
     email: ""
