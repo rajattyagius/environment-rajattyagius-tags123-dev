@@ -29,6 +29,14 @@ pipelineConfig:
         environment:
         - name: DEPLOY_NAMESPACE
           value: jx
+        - name: GIT_AUTHOR_NAME
+          value: rajattyagius
+        - name: GIT_COMMITTER_NAME
+          value: rajattyagius
+        - name: GIT_AUTHOR_EMAIL
+          value: rajat.tyagi.us@gmail.com
+        - name: GIT_COMMITTER_EMAIL
+          value: rajat.tyagi.us@gmail.com
         stages:
         - name: release
           steps:

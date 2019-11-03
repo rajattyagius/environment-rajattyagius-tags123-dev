@@ -15,9 +15,9 @@ cluster:
   zone: asia-south1-a
 environments:
 - ingress:
-    domain: 35.200.253.211.nip.io
-    externalDNS: false
-    namespaceSubDomain: -jx.
+    domain: jxbootproject.tagscloud.org
+    externalDNS: true
+    namespaceSubDomain: ""
     tls:
       email: ""
       enabled: false
@@ -41,7 +41,6 @@ environments:
       enabled: false
       production: false
   key: production
-gitops: true
 ingress:
   domain: 35.200.253.211.nip.io
   externalDNS: false
@@ -69,6 +68,6 @@ storage:
 vault: {}
 velero: {}
 versionStream:
-  ref: v1.0.179
+  ref: v1.0.178
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow
