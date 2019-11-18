@@ -22,7 +22,7 @@ environments:
     tls:
       email: rajat.tyagi.us@gmail.com
       enabled: true
-      production: false
+      production: true
   key: dev
 - ingress:
     domain: jxbootproject.tagscloud.org
@@ -31,7 +31,7 @@ environments:
     tls:
       email: rajat.tyagi.us@gmail.com
       enabled: true
-      production: false
+      production: true
   key: staging
 - ingress:
     domain: jxbootproject.tagscloud.org
@@ -40,7 +40,7 @@ environments:
     tls:
       email: rajat.tyagi.us@gmail.com
       enabled: true
-      production: false
+      production: true
   key: production
 gitops: true
 ingress:
@@ -51,7 +51,7 @@ ingress:
   tls:
     email: rajat.tyagi.us@gmail.com
     enabled: true
-    production: false
+    production: true
 kaniko: true
 repository: nexus
 secretStorage: vault
