@@ -20,8 +20,8 @@ environments:
     externalDNS: true
     namespaceSubDomain: -jx.
     tls:
-      email: ""
-      enabled: false
+      email: rajat.tyagi.us@gmail.com
+      enabled: true
       production: false
   key: dev
 - ingress:
@@ -58,18 +58,18 @@ secretStorage: vault
 storage:
   backup:
     enabled: true
-    url: ""
+    url: gs://rajattyagius-tags123-backup-a9e09c6f-e9e1-41d0-a212-788
   logs:
     enabled: true
-    url: ""
+    url: gs://rajattyagius-tags123-logs-b7249f87-122e-40ae-9112-c855b
   reports:
     enabled: true
-    url: ""
+    url: gs://rajattyagius-tags123-reports-3b860129-6742-46ed-923e-c0
   repository:
     enabled: true
-    url: ""
+    url: gs://rajattyagius-tags123-repository-d52f8425-6d29-41c7-ae75
 vault: {}
-velero: 
+velero:
   namespace: velero
 versionStream:
   ref: v1.0.179
