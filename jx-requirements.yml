@@ -29,8 +29,8 @@ environments:
     externalDNS: true
     namespaceSubDomain: ""
     tls:
-      email: ""
-      enabled: false
+      email: rajat.tyagi.us@gmail.com
+      enabled: true
       production: false
   key: staging
 - ingress:
@@ -38,8 +38,8 @@ environments:
     externalDNS: true
     namespaceSubDomain: ""
     tls:
-      email: ""
-      enabled: false
+      email: rajat.tyagi.us@gmail.com
+      enabled: true
       production: false
   key: production
 gitops: true
@@ -49,8 +49,8 @@ ingress:
   externalDNS: true
   namespaceSubDomain: -jx.
   tls:
-    email: ""
-    enabled: false
+    email: rajat.tyagi.us@gmail.com
+    enabled: true
     production: false
 kaniko: true
 repository: nexus
