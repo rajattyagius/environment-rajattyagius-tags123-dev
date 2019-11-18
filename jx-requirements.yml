@@ -54,22 +54,23 @@ ingress:
     production: false
 kaniko: true
 repository: nexus
-secretStorage: local
+secretStorage: vault
 storage:
   backup:
-    enabled: false
+    enabled: true
     url: ""
   logs:
-    enabled: false
+    enabled: true
     url: ""
   reports:
-    enabled: false
+    enabled: true
     url: ""
   repository:
-    enabled: false
+    enabled: true
     url: ""
 vault: {}
-velero: {}
+velero: 
+  namespace: velero
 versionStream:
   ref: v1.0.179
   url: https://github.com/jenkins-x/jenkins-x-versions.git
