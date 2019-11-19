@@ -16,7 +16,7 @@ cluster:
 environments:
 - ingress:
     cloud_dns_secret_name: external-dns-gcp-sa
-    domain: jxbootproject.tagscloud.org
+    domain: tagscloud.org
     externalDNS: true
     namespaceSubDomain: -jx.
     tls:
@@ -25,7 +25,7 @@ environments:
       production: true
   key: dev
 - ingress:
-    domain: jxbootproject.tagscloud.org
+    domain: tagscloud.org
     externalDNS: true
     namespaceSubDomain: ""
     tls:
@@ -34,7 +34,7 @@ environments:
       production: true
   key: staging
 - ingress:
-    domain: jxbootproject.tagscloud.org
+    domain: tagscloud.org
     externalDNS: true
     namespaceSubDomain: ""
     tls:
@@ -45,7 +45,7 @@ environments:
 gitops: true
 ingress:
   cloud_dns_secret_name: external-dns-gcp-sa
-  domain: jxbootproject.tagscloud.org
+  domain: tagscloud.org
   externalDNS: true
   namespaceSubDomain: -jx.
   tls:
