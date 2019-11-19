@@ -1,0 +1,130 @@
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-credential-initializer-gnxs9[0m
+{"level":"warn","ts":1574184813.1244187,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1574184813.1265569,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-5bghb[0m
+{"level":"warn","ts":1574184814.1885383,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1574184814.19373,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-git-source-rajattyagius-environment-rajatt-6rgkx[0m
+{"level":"warn","ts":1574184823.5098553,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1574184825.7700937,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/************/environment-************-tags123-dev.git @ v1.0.45 in path /workspace/source"}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a0edb71b59a1bc6fb2696bc199a5983a676d798d
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+no need to reconnect to cluster
+Verifying the kubernetes cluster before we try to boot Jenkins X in namespace: **
+Trying to lazily create any missing resources to get the current cluster ready to boot Jenkins X
+Verifying Ingress...
+
+Using namespace '**' from context named '' on server ''.
+
+Verifying the CLI packages using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.179
+using version 2.0.945 of **
+CLI packages kubectl, git, helm seem to be setup correctly
+NAME               VERSION
+**                 2.0.945
+Kubernetes cluster v1.12.10-gke.17
+kubectl            v1.16.1
+helm client        Client: v2.14.3+g0e7f3b6
+git                2.21.0
+
+Verifying Storage...
+Storage configuration looks good
+
+Helm installed and configured
+Ensuring Helm chart repository https://storage.googleapis.com/chartmuseum.jenkins-x.io is configured
+Validating Kaniko secret in namespace **
+
+Validating the velero secret in namespace velero
+
+
+Cluster looks good, you are ready to '** boot' now!
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
+Jenkins X CRDs upgraded with success
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-install-velero[0m
+Modified file /workspace/source/systems/velero/Chart.yaml to set the chart to version 5
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.179
+
+
+
+
+
+
+
+
+
+
+
+
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-install-velero-backups[0m
+Modified file /workspace/source/systems/velero-backups/Chart.yaml to set the chart to version 5
+Ignoring templates/default-backup.yaml
+No requirements file: /tmp/**-helm-apply-290987905/velero-backups/requirements.yaml so not checking for missing versions
+
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-install-nginx-controller[0m
+Modified file /workspace/source/systems/**ing/Chart.yaml to set the chart to version 5
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.179
+
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-create-install-values[0m
+using a custom domain and GKE so enabling external dns, you can also now enable TLS
+validating the external-dns secret in namespace **
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-install-external-dns[0m
+Modified file /workspace/source/systems/external-dns/Chart.yaml to set the chart to version 5
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.179
+Adding missing Helm repo: charts.bitnami.com https://charts.bitnami.com/bitnami
+Read credentials for https://charts.bitnami.com/bitnami from vault helm/repos
+Successfully added Helm repository charts.bitnami.com.
+
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-install-cert-manager-crds[0m
+customresourcedefinition.apiextensions.k8s.io/certificates.certmanager.k8s.io configured
+customresourcedefinition.apiextensions.k8s.io/challenges.certmanager.k8s.io configured
+customresourcedefinition.apiextensions.k8s.io/clusterissuers.certmanager.k8s.io configured
+customresourcedefinition.apiextensions.k8s.io/issuers.certmanager.k8s.io configured
+customresourcedefinition.apiextensions.k8s.io/orders.certmanager.k8s.io configured
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-install-cert-manager[0m
+Modified file /workspace/source/systems/cm/Chart.yaml to set the chart to version 5
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.179
+Adding missing Helm repo: charts.jetstack.io https://charts.jetstack.io
+Read credentials for https://charts.jetstack.io from vault helm/repos
+Successfully added Helm repository charts.jetstack.io.
+
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-install-acme-issuer-and-certificate[0m
+Modified file /workspace/source/systems/acme/Chart.yaml to set the chart to version 5
+Ignoring templates/cert-manager-prod-certificate.yaml
+Ignoring templates/cert-manager-prod-issuer.yaml
+Ignoring templates/cert-manager-staging-certificate.yaml
+Ignoring templates/cert-manager-staging-issuer.yaml
+No requirements file: /tmp/**-helm-apply-513614797/acme/requirements.yaml so not checking for missing versions
+
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-install-vault[0m
+not attempting to boot Vault as using secret storage: local
+
+Showing logs for build [32mrajattyagius-environment-rajatt-79lmj-5[0m stage [32mrelease[0m and container [32mstep-create-helm-values[0m
+defaulting to secret storage scheme local found from requirements file at /workspace/source/**-requirements.yml
+defaulting to secret base path to the cluster name ************-tags123 found from requirements file at /workspace/source/**-requirements.yml
+generated schema file /workspace/source/env/parameters.schema.json from template /workspace/source/env/parameters.tmpl.schema.json
+
+Jenkins X Admin Username ***** [Automatically accepted default value]
+error: asking questions for schema: no existing or default value in answer to question Jenkins X Admin Password and no value for $JX_VALUE_ADMINUSER_PASSWORD
+[31m
+Pipeline failed on stage 'release' : container 'step-create-helm-values'. The execution of the pipeline has stopped.[0m
