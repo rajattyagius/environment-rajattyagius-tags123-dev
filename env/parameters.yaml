@@ -1,0 +1,10 @@
+adminUser:
+  password: vault:rajattyagius-tags123/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: rajat.tyagi.us@gmail.com
+  token: vault:rajattyagius-tags123/pipelineUser:token
+  username: rajattyagius
+prow:
+  hmacToken: vault:rajattyagius-tags123/prow:hmacToken
