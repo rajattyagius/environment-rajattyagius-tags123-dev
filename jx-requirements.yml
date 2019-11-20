@@ -12,7 +12,6 @@ cluster:
   project: jxbootproject
   provider: gke
   registry: gcr.io
-  vaultName: rajat1-vault
   zone: asia-south1-a
 environments:
 - ingress:
@@ -55,7 +54,7 @@ ingress:
     production: true
 kaniko: true
 repository: nexus
-secretStorage: vault
+secretStorage: local
 storage:
   backup:
     enabled: true
@@ -69,8 +68,7 @@ storage:
   repository:
     enabled: true
     url: gs://rajattyagius-tags123-repository-d52f8425-6d29-41c7-ae75
-vault:
-  name: rajat1-vault
+vault: {}
 velero:
   namespace: velero
 versionStream:
